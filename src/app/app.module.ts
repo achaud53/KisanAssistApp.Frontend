@@ -25,6 +25,8 @@ import { ProductsHeaderComponent } from './pages/kisan-home/components/products-
 import { KisanHomeComponent } from './pages/kisan-home/kisan-home.component';
 import { CartService } from './services/cart.service';
 import { StoreService } from './services/store.service';
+import { KisanServicesComponent } from './pages/kisan-home/components/kisan-services/kisan-services.component';
+import { KisanMarketComponent } from './pages/kisan-home/components/kisan-market/kisan-market.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { StoreService } from './services/store.service';
     ProductsHeaderComponent,
     FiltersComponent,
     ProductBoxComponent,
-    CartComponent
+    CartComponent,
+    KisanServicesComponent,
+    KisanMarketComponent
   ],
   imports: [
     BrowserModule,

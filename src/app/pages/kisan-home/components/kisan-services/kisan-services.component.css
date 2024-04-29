@@ -1,0 +1,43 @@
+.service-Main{
+    
+    display: flex;
+}
+
+.service1{
+    /* height: 250px;
+    width: 400px;
+    background-color: yellow; */
+    flex-direction: row;
+    margin-left: 20px;
+
+
+}
+
+.card-title{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.service2{ 
+    /* height: 250px;
+    width: 400px;
+    background-color: red; */
+    flex-direction: row;
+    margin-left: 50px;
+
+}
+
+.location-Check{
+    display: flex;
+
+}
+
+.location-Check2{
+    flex-direction: row;
+    font-size: 16px;
+    color: green;
+}
+
+
+
+

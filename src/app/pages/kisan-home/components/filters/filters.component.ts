@@ -6,9 +6,11 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./filters.component.css']
 })
 export class FiltersComponent implements OnInit {
-  categories = ['shoes', 'sports'];
+  categories = ['Irrigation Services', 'Electric Services', 'Medical Services', 'Construction Assistance'];
+  marketDetails = ['Agriculture Equipment', 'Pesticides', 'Seeds', 'Milk Business'];
 
   @Output() showCategory = new EventEmitter<string>();
+  @Output() marketCategory = new EventEmitter<string>();
 
   constructor() { }
 
@@ -16,7 +18,13 @@ export class FiltersComponent implements OnInit {
   }
 
   onShowCategory(category: string): void {
+    console.log("Checking category" + category)
     this.showCategory.emit(category);
   }
+
+  // onShowMarket(marketDetails: string): void {
+  //   console.log("Checking category" + marketDetails)
+  //   this.marketCategory.emit(marketDetails);
+  // }
 
 }

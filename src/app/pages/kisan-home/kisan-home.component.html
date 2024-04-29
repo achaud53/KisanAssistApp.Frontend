@@ -5,6 +5,7 @@
   <mat-drawer-content class="p-6">
     <app-products-header (columnsCountChange)="onColumnsCountChange($event)"></app-products-header>
 
+    <!-- This is Grid List -->
     <mat-grid-list gutterSize="16" [cols]="cols" [rowHeight]="rowHeight">
       <mat-grid-tile *ngFor="let product of products">
         <app-product-box
@@ -14,6 +15,10 @@
         [fullWidthMode]="cols === 1"></app-product-box>
       </mat-grid-tile>
     </mat-grid-list>
+
+      <!-- This is Services App -->
+    <app-kisan-services  *ngIf="!isMarketShow" [categoryType]="category"></app-kisan-services>
+    <app-kisan-market  *ngIf="isMarketShow"[categoryType]="category" ></app-kisan-market >
 
   </mat-drawer-content>
 </mat-drawer-container>

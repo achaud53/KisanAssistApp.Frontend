@@ -1,0 +1,123 @@
+.marketPage{
+    display: flex;
+}
+
+.market-Main{
+    height: 355px;
+    width: 400px;
+    flex-direction: row;
+}
+
+
+.market-Main2{
+    height: 355px;
+    width: 400px;
+    flex-direction: row;
+}
+
+
+.product-details-Main{
+    display: flex;
+    margin-top: 12px;
+}
+
+.prd-Tittle{
+    height: 40px;
+    width: 385px;
+    padding-top: 10px;
+    margin-left: 8px;
+    background-color: rgb(235, 88, 88);
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.product-img{
+    height: 200px;
+    width: 150px;
+    background-color: red;
+    flex-direction: row;
+    margin-left: 10px;
+}
+
+.prd-img1{
+    height: 200px;
+    width: 150px;
+}
+
+.product-details{
+    height: 220px;
+    width: 218px;
+    margin-left: 10px;
+}
+
+.add-details{
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.add-details2{
+    flex-direction: column;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.btn1{
+    color: aqua;
+    background-color: rgb(235, 88, 88);
+}
+
+.btn2{
+    color: aqua;
+    background-color: rgb(235, 88, 88);
+    margin-left: 14px;
+}
+
+.dtl-value{
+    background-color: rgb(244, 244, 244);
+    font-size: 35px;
+    color: black;
+    margin-top: 68px;
+    height: 56px;
+    padding-top: 20px;
+    display: flex;
+}
+
+.dtl-value2{
+    font-size: 12px;
+    flex-direction: row;
+}
+
+
+.dtl-value3{
+    font-size: 18px;
+    flex-direction: row;
+}
+
+.dtl1{
+    display: flex;
+}
+
+.dlt1-2{
+    color: rgb(235, 88, 88);
+}
+
+.dlt1-3{
+    color: green;
+}
+
+.dtl-Main{
+    background-color: rgb(244, 244, 244);
+    height: 96px;
+}
+
+.location-Check{
+    display: flex;
+
+}
+
+.location-Check2{
+    flex-direction: row;
+    font-size: 16px;
+    color: green;
+    
+}
