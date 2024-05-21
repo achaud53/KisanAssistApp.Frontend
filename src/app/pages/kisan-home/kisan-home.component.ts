@@ -4,6 +4,7 @@ import { Product } from 'src/app/models/product.model';
 import { StoreService } from 'src/app/services/store.service';
 import { CartService } from '../../services/cart.service';
 import { KisanServicesComponent } from './components/kisan-services/kisan-services.component';
+import { KisanMarketComponent } from './components/kisan-market/kisan-market.component';
 
 const ROWS_HEIGHT: { [id:number]: number } = { 1: 400, 3: 335, 4: 350};
 @Component({
@@ -14,6 +15,8 @@ const ROWS_HEIGHT: { [id:number]: number } = { 1: 400, 3: 335, 4: 350};
 export class KisanHomeComponent implements OnInit, OnDestroy {
 
   @ViewChild(KisanServicesComponent) KisanServicesComp: KisanServicesComponent | undefined;
+  @ViewChild(KisanMarketComponent) KisanMarketComp: KisanMarketComponent | undefined;
+
   
   category: string = '' ;
   cols: number = 4;
@@ -58,7 +61,17 @@ export class KisanHomeComponent implements OnInit, OnDestroy {
     this.category === "Electric Services") {
     this.isMarketShow = false;
     this.KisanServicesComp?.refreshKisanService();
-    }else{
+    }
+    else if(
+      this.category === "Agriculture Equipment" 
+      || this.category === "Seeds" 
+      ||this.category === "Milk Business"
+      || this.category === "Pesticides" ){
+         this.isMarketShow = true;
+        this.KisanMarketComp?.refreshKisanMarket();
+  }
+    
+    else{
       this.isMarketShow = true;
     }
 
@@ -68,10 +81,11 @@ export class KisanHomeComponent implements OnInit, OnDestroy {
 
 
 
+
   onAddToCart(product: Product): void{
     this.cartService.addToCart({
-      product: product.image,
-      name: product.title,
+      product: product.imageUrl,
+      name: product.name,
       price: product.price,
       quantity: 1,
       id: product.id
