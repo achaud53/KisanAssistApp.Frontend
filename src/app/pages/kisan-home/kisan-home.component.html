@@ -18,7 +18,7 @@
 
       <!-- This is Services App -->
     <app-kisan-services  *ngIf="!isMarketShow" [categoryType]="category"></app-kisan-services>
-    <app-kisan-market  *ngIf="isMarketShow"[categoryType]="category" ></app-kisan-market >
+    <app-kisan-market [product]="products"  (addToCart)="onAddToCart($event)" *ngIf="isMarketShow"[categoryType]="category" ></app-kisan-market >
 
   </mat-drawer-content>
 </mat-drawer-container>

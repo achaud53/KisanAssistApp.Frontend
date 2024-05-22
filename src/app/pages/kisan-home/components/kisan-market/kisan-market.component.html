@@ -6,8 +6,8 @@
 <br><br>
 
 
-<div class="marketPage row">
-    <div  *ngFor="let product of products" class="market-Main border col-md-4 mb-4 mr-4">
+<div *ngIf="!isMilkMarket" class="marketPage row">
+    <div   *ngFor="let product of products" class="market-Main border col-md-4 mb-4 mr-4">
         <div  class="prd-Tittle">{{ product.name }}</div>
     
         <div class="product-details-Main">
@@ -33,10 +33,95 @@
         <div class="add-details">
         <hr>
         <div class="add-details2">
-            <button type="button" class="btn1 btn btn-secondary">Add to Card</button>
+            <button (click)="onAddToCart()" type="button" class="btn1 btn btn-secondary">Add to Card</button>
             <button type="button" class="btn2 btn btn-success">Order</button>
         </div>
         </div>
     </div>
 
+</div>
+
+<div class="marketPage" *ngIf="isMilkMarket">
+    <div class="market-Main border">
+        <div  class="prd-Tittle">Get Milk Service </div>
+    
+        <div class="product-details-Main">
+            <div class="product-img">
+                <img class="prd-img1" src="assets/milk1.jpeg" alt="...">
+            </div>
+            <div class="product-details">
+    
+                <div class="dtl-Main">
+                    <div class="dtl1">Operate By:<br>
+                    </div>
+                    <div class="dlt1-2"> Chakpiranji Village Mik</div>
+                    <div class="dtl1">Description:
+                    </div>
+                    <div class="dlt1-1">We provide the milk on Daily and Monthly Basis</div>
+                    <div class="dtl1">Daily:
+                        <div class="dlt1-"> ₹26.00 / Liter</div>
+                    </div>
+                    <div class="dtl1">Monthly:
+                        <div class="dlt1-"> ₹750.00 / Liter</div>
+                    </div>
+                    
+                    
+                </div>
+             
+                <div class="dtl-value">₹750.00
+                    <div class="dtl-value2">
+                        /Lt/Month
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="add-details">
+        <hr>
+        <div class="add-details2">
+            <button type="button" class="btn1 btn btn-secondary">Contact Us</button>
+            <button type="button" class="btn2 btn btn-success">Order</button>
+        </div>
+        </div>
+    </div>
+
+    <div class="market-Main border">
+        <div  class="prd-Tittle">Provide Your Milk Service </div>
+    
+        <div class="product-details-Main">
+            <div class="product-img">
+                <img class="prd-img1" src="assets/milk2.jpeg" alt="...">
+            </div>
+            <div class="product-details">
+    
+                <div class="dtl-Main">
+                    <div class="dtl1">Operate By:<br>
+                    </div>
+                    <div class="dlt1-2"> Update your service here</div>
+                    <div class="dtl1">Description:
+                    </div>
+                    <div class="dlt1-1">We are accepting the milk on Daily and Monthly Basis</div>
+                    <div class="dtl1">Daily:
+                        <div class="dlt1-"> Update Money in ₹ per/ Liter</div>
+                    </div>
+                    <div class="dtl1">Monthly:
+                        <div class="dlt1-"> Update Money in ₹ per/ Liter</div>
+                    </div>
+                    
+                    
+                </div>
+             
+                <div class="dtl-value">
+                    <div class="dtl-value2">
+                        Accepting Milk Servive in /Lt/Month
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="add-details">
+        <hr>
+        <div class="add-details2">
+            <button type="button" class="btn1 btn btn-secondary">Update Milk Service</button>
+        </div>
+        </div>
+    </div>
 </div>

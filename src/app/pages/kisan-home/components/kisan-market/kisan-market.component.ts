@@ -13,12 +13,13 @@ import { StoreService } from 'src/app/services/store.service';
 export class KisanMarketComponent implements OnInit {
 
   @Input() categoryType : string | undefined;
-  @Input() product: Product | undefined;
+  @Input() product: Array<Product> | undefined;//This is the thing that have to change
   @Output() addToCart = new EventEmitter();
   products: Array<Product> | undefined;
   productSubscription: Subscription | undefined;
   sort: string = 'desc';
   count: string = '12';
+  isMilkMarket:boolean= false;
   // isElectricS : boolean = false;
   // isMedicalS : boolean = false;
   // isIrrigationS : boolean = false;
@@ -53,7 +54,7 @@ export class KisanMarketComponent implements OnInit {
   ngOnInit(): void {
     // this.getProducts();
     console.log("Checking on Kisan Market111" +this.categoryType)
-
+    this.isMilkMarket = false;
     console.log("Checking on Kisan Service" +this.categoryType)
     if (this.categoryType === "Agriculture Equipment" ){
             this.getProductsBytype('Agri-Equip')
@@ -61,6 +62,7 @@ export class KisanMarketComponent implements OnInit {
         }else if (this.categoryType === "Seeds" ){
           this.getProductsBytype('Seeds')
       }else if (this.categoryType === "Milk Business" ){
+        this.isMilkMarket = true;
         this.getProductsBytype('MilkService')
     }else if (this.categoryType === "Pesticides" ){
       this.getProductsBytype('Pesticides')
